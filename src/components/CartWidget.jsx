@@ -7,7 +7,7 @@ const CartWidget = () => {
   return (
     <Flex>
       <Box p='4'>
-        <img src={cart} alt="imagen carrito" width='25px' height='25px' />
+        <img src={cart} alt="imagen carrito" width='50px' height='50px' />
       </Box>
       <Spacer />
       <Box p='4'>

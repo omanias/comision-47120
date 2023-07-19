@@ -7,9 +7,9 @@ import brand from '../assets/Picture6-1.svg'
 
 const NavBar = () => {
   return (
-    <Flex className='encabezado'>
+    <Flex>
       <Box p='4'>
-        <img src={brand} alt="" width='75px' height='75px' />
+        <img src={brand} alt="" width='100px' height='100px' />
       </Box>
       <Spacer />
       <Box p='4'>
