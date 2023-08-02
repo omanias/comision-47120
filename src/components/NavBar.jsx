@@ -3,13 +3,16 @@ import { Menu, MenuButton, Button, MenuList, MenuItem, Flex, Box, Spacer } from 
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import CartWidget from './CartWidget'
 import brand from '../assets/Picture6-1.svg'
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
   return (
     <Flex>
       <Box p='4'>
-        <img src={brand} alt="" width='100px' height='100px' />
+        <Link to={"/"}>
+          <img src={brand} alt="" width='100px' height='100px' />
+        </Link>
       </Box>
       <Spacer />
       <Box p='4'>
@@ -18,16 +21,30 @@ const NavBar = () => {
             Categories
           </MenuButton>
           <MenuList>
-            <MenuItem>Category A</MenuItem>
-            <MenuItem>Category B</MenuItem>
-            <MenuItem>Category C</MenuItem>
+            <MenuItem>
+              <Link to={`/category/${'cat1'}`}>
+                Category A
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/category/${'cat2'}`}>
+                Category B
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/category/${'cat3'}`}>
+                Category C
+              </Link>
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>
       <Spacer />
 
       <Box>
-        <CartWidget />
+        <Link to={"/cart"}>
+          <CartWidget />
+        </Link>
       </Box>
     </Flex>
   )
