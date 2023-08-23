@@ -9,8 +9,6 @@ const ItemDetail = ({ productos }) => {
 
     const filteredProducts = productos.filter((producto) => producto.id == id)
 
-
-
     return (
         <div>
             {filteredProducts.map((p) => {
@@ -38,4 +36,4 @@ const ItemDetail = ({ productos }) => {
     )
 }
 
-export default ItemDetail;
+export default React.memo(ItemDetail);
